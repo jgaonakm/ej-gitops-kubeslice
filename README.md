@@ -1,1 +1,2 @@
 # ej-gitops-kubeslice
+.
