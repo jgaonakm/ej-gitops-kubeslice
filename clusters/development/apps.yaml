@@ -1,0 +1,14 @@
+kind: Kustomization
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+metadata:
+  name: boutique
+  namespace: flux-system
+spec:
+  path: "./apps/development/boutique"
+  interval: 1m
+  prune: true
+  targetNamespace: boutique
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+    namespace: flux-system
