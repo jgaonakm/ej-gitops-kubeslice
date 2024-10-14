@@ -1,0 +1,32 @@
+kind: Gateway
+apiVersion: networking.istio.io/v1
+metadata:
+  name: frontend-gateway
+  namespace: boutique
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+    - port:
+        number: 80
+        name: http
+        protocol: HTTP
+      hosts:
+        - "*" # "*" debe ser reemplazado con el hostname apropiado para mayor seguridad
+---
+kind: VirtualService
+apiVersion: networking.istio.io/v1
+metadata:
+  name: frontend-virtual-service
+  namespace: boutique
+spec:
+  hosts:
+    - "*" # Debe ser igual al definido en el gateway
+  gateways:
+    - frontend-gateway
+  http:
+    - route: 
+      - destination: # Sin matchers, usando la ruta default. Ref. https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPMatchRequest
+        host: frontend # Istio transforma este valor en el FQDN del servicio
+        port:
+          number: 80
