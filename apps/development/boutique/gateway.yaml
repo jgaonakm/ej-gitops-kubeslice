@@ -27,6 +27,6 @@ spec:
   http:
     - route: 
       - destination: # Sin matchers, usando la ruta default. Ref. https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPMatchRequest
-        host: frontend # Istio transforma este valor en el FQDN del servicio
-        port:
-          number: 80
+          host: frontend # Istio transforma este valor en el FQDN del servicio
+          port:
+            number: 80
