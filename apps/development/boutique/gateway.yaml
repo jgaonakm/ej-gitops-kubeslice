@@ -5,7 +5,7 @@ metadata:
   namespace: boutique
 spec:
   selector:
-    istio: ingressgateway
+    istio: ingress # Debe coincidir con la etiqueta asignada al pod istio-ingress
   servers:
     - port:
         number: 80
