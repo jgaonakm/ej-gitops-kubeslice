@@ -22,7 +22,7 @@ spec:
   releaseName: prometheus
   install:
     crds: CreateReplace
-  update:
+  upgrade:
     crds: CreateReplace
   chart:
     spec:
