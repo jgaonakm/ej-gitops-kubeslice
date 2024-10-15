@@ -26,7 +26,7 @@ spec:
     crds: CreateReplace
   chart:
     spec:
-      chart: kubeslice/prometheus
+      chart: prometheus
       interval: 6h
       sourceRef:
         kind: HelmRepository
