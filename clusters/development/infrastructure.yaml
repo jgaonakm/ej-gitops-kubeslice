@@ -1,0 +1,13 @@
+kind: Kustomization
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+metadata:
+  name: infrastructure
+  namespace: flux-systems
+spec:
+  interval: 2m
+  path: ./infra
+  prune: true
+  wait: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
