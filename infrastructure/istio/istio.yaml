@@ -4,7 +4,7 @@ metadata:
   name: istio-system
 ---
 kind: HelmRepository
-apiVersion: helm.toolkit.fluxcd.io/v2
+apiVersion: source.toolkit.fluxcd.io/v1
 metadata:
   name: istio
   namespace: istio-system
