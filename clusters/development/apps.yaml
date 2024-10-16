@@ -7,7 +7,7 @@ spec:
   path: "./apps/development/boutique"
   interval: 1m
   prune: true
-  targetNamespace: boutique
+  targetNamespace: online-boutique
   sourceRef:
     kind: GitRepository
     name: flux-system
