@@ -2,7 +2,7 @@ kind: Gateway
 apiVersion: networking.istio.io/v1
 metadata:
   name: frontend-gateway
-  namespace: boutique
+  namespace: online-boutique
 spec:
   selector:
     istio: ingress # Debe coincidir con la etiqueta asignada al pod istio-ingress
@@ -18,7 +18,7 @@ kind: VirtualService
 apiVersion: networking.istio.io/v1
 metadata:
   name: frontend-virtual-service
-  namespace: boutique
+  namespace: online-boutique
 spec:
   hosts:
     - "*" # Debe ser igual al definido en el gateway
